@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnlineBookShop.Data;
 
@@ -10,9 +11,11 @@ using OnlineBookShop.Data;
 namespace OnlineBookShop.Migrations
 {
     [DbContext(typeof(OnlineBookShopContext))]
-    partial class OnlineBookShopContextModelSnapshot : ModelSnapshot
+    [Migration("20250429083415_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
