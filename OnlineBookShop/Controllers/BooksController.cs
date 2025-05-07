@@ -20,6 +20,7 @@ namespace OnlineBookShop.Controllers
         }
 
         // GET: Books
+        [Route("Bookslist")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Books.ToListAsync());
